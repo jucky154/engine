@@ -46,7 +46,7 @@ contains
      k=(sum(no)+sum(nio))*gamma*R/(gamma-1)
      Tf=Q/k +To
      if(Tf > 2500)then
-        Tf = (2*Q+To*k)/(0.0004*Q+k)
+        Tf = (2*Q+To)/(0.0004*Q+k)
      else
         Tf=Tf
      end if
@@ -265,7 +265,7 @@ contains
      cd = dia_com(ar,at)
      mp = mas_pro(pr,fi,ml)
      ltan = len_tan(mp,rho,dtan)
-     print*, pr, po, MR, Tf, isp, cd, lenc, dtan, ltan, fi
+     print*, pr, po, MR, Tf, isp, cd, lenc, dtan, ltan
   end do
  end program engine
  
