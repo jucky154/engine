@@ -130,7 +130,8 @@ contains
      real,intent(in)::mp,rho,dtan
      real::ltan,pi
      pi=3.14159265
-     ltan=4*mp/(rho*pi*dtan*dtan)
+     ltan=4*mp/(rho*pi*dtan*dtan*1000)
+     !単位換算で1000かける
    end function len_tan
 
    !consider about chemical things
