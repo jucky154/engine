@@ -39,7 +39,7 @@ contains
 
     !products h
      do i = 1, fini
-        Q=Q-no(fini)*ho(fini)
+        Q=Q-no(i)*ho(i)
      end do
 
      !solve Tf
@@ -233,10 +233,16 @@ contains
    allocate(no(fini),ho(fini),Mo(fini),co(fini))
    !排気ガスの質量数[kg/mol]
    Mo(1)=0.018
-   !酸化剤のエンタルピー[J/mol]
+   !排気ガスのエンタルピー[J/mol]
    ho(1)=-241900
-   !酸化剤の完全反応の時の係数(整数）
+   !排気の完全反応の時の係数(整数）
    co(1)=2
+   !排気ガスの質量数[kg/mol]
+   !Mo(2)=0.018
+   !排気ガスのエンタルピー[J/mol]
+   !ho(2)=-241900
+   !排気ガスの完全反応の時の係数(整数）
+   !co(2)=2
 
  !ロケットそのものについて
    !燃焼室とスロート面積の比
